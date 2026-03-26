@@ -22,13 +22,15 @@ export default defineConfig({
   reporter: 'html',
 
   // Shared settings for all tests
- use: {
+use: {
   baseURL: 'https://qauto.forstudy.space',
   httpCredentials: {
     username: 'guest',
     password: 'welcome2qauto',
   },
-  trace: 'on-first-retry',
+  video: 'retain-on-failure',
+  screenshot: 'on-first-failure',
+  trace: 'retain-on-failure',
 },
 
   // Keep only one browser project
