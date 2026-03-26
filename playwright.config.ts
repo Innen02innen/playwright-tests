@@ -22,13 +22,14 @@ export default defineConfig({
   reporter: 'html',
 
   // Shared settings for all tests
-  use: {
-    // Base URL for page.goto('/')
-    baseURL: 'https://qauto.forstudy.space',
-
-    // Collect trace on first retry
-    trace: 'on-first-retry',
+ use: {
+  baseURL: 'https://qauto.forstudy.space',
+  httpCredentials: {
+    username: 'guest',
+    password: 'welcome2qauto',
   },
+  trace: 'on-first-retry',
+},
 
   // Keep only one browser project
   projects: [
